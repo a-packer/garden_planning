@@ -1,0 +1,14 @@
+github.com/daviddengcn/go-colortext v1.0.0 h1:ANqDyC0ys6qCSvuEK7l3g5RaehL/Xck9EX8ATG8oKsE=
+github.com/daviddengcn/go-colortext v1.0.0/go.mod h1:zDqEI5NVUop5QPpVJUxE9UO10hRnmkD5G4Pmri9+m4c=
+github.com/dixonwille/wmenu v4.0.2+incompatible h1:lxrPJsx9LpdUFD5T+dOfl6gPKLbBmiAtEdACLT1I2/w=
+github.com/dixonwille/wmenu v4.0.2+incompatible/go.mod h1:DnajdZEKFQksxBctWekpWaQXQrDUHRBco6b8MyZnR1s=
+github.com/golangplus/bytes v0.0.0-20160111154220-45c989fe5450/go.mod h1:Bk6SMAONeMXrxql8uvOKuAZSu8aM5RUGv+1C6IJaEho=
+github.com/golangplus/bytes v1.0.0/go.mod h1:AdRaCFwmc/00ZzELMWb01soso6W1R/++O1XL80yAn+A=
+github.com/golangplus/fmt v1.0.0/go.mod h1:zpM0OfbMCjPtd2qkTD/jX2MgiFCqklhSUFyDW44gVQE=
+github.com/golangplus/testing v1.0.0/go.mod h1:ZDreixUV3YzhoVraIDyOzHrr76p6NUh6k/pPg/Q3gYA=
+github.com/mattn/go-isatty v0.0.20 h1:xfD0iDuEKnDkl03q4limB+vH+GxLEtL/jb4xVJSWWEY=
+github.com/mattn/go-isatty v0.0.20/go.mod h1:W+V8PltTTMOvKvAeJH7IuucS94S2C6jfK/D7dTCTo3Y=
+golang.org/x/sys v0.6.0 h1:MVltZSvRTcU2ljQOhs94SXPftV6DCNnZViHeQps87pQ=
+golang.org/x/sys v0.6.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
+gopkg.in/dixonwille/wlog.v2 v2.0.0 h1:TbGWtD8ahWVSihKKr+z2Dw7Cv/7IrfN6dwrcrre17pU=
+gopkg.in/dixonwille/wlog.v2 v2.0.0/go.mod h1:JYQHRnhGPLno/iATOiGkEXoRanJXqdz9Qo6/QwfARUc=
