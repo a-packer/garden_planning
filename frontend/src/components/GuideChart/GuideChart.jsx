@@ -1,41 +1,30 @@
-import React from 'react'
+import React, {useState} from 'react'
 import BarChart from './BarChart';
 
 export const GuideChart = () => {
-  const plantingData = [
-    {
-      name: 'Basil',
-      numWeeksToSproutIndoors: 5,
-      weeksRelToFrostDateStartOutdoors: 1,
-      totalGrowthMonths: 5,
-    },
-    {
-      name: 'Beets',
-      numWeeksToSproutIndoors: 5,
-      weeksRelToFrostDateStartOutdoors: -2,
-      totalGrowthMonths: 2.5,
-    },
-    {
-      name: 'Broccoli',
-      numWeeksToSproutIndoors: 5,
-      weeksRelToFrostDateStartOutdoors: -2,
-      totalGrowthMonths: 3,
-    },
-    {
-      name: 'Carrots',
-      numWeeksToSproutIndoors: 0,
-      weeksRelToFrostDateStartOutdoors: -2,
-      totalGrowthMonths: 2.5,
-    },
-    {
-      name: 'Collards',
-      numWeeksToSproutIndoors: 5,
-      weeksRelToFrostDateStartOutdoors: -4,
-      totalGrowthMonths: 3,
-    } 
-  ];
+  const [plants, setPlants] = useState([])
+  const displayPlantPlan = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('/gardens', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+      });
+      if (response.ok) {
+        setPlants(await response.json())
+      }
+    } catch (error) {
+      console.log('Error with fetching plants');
+    }
+  };
   return (
-    <BarChart data={plantingData} />
+    <>
+      <button onClick={displayPlantPlan}>Set Plan for Plants</button>
+      <BarChart data={plants} />
+    </>
+    
   )
 }
 

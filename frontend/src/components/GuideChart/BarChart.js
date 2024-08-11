@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 
 const BarChart = ({ data }) => {
+
+  console.log(data)
   const ref = useRef();
 
   useEffect(() => {
@@ -28,11 +30,11 @@ const BarChart = ({ data }) => {
 
     // Define the scales
     const xScale = d3.scaleLinear()
-      .domain([0, d3.max(data, d => d.totalGrowthMonths)])
+      .domain([0, d3.max(data, d => d.totalGrowth)])
       .range([0, 480]);
 
     const yScale = d3.scaleBand()
-      .domain(data.map(d => d.name))
+      .domain(data.map(d => d.plantName))
       .range([0, 280])
       .padding(0.1);
 
@@ -43,8 +45,8 @@ const BarChart = ({ data }) => {
       .append('rect')
       .attr('class', 'bar')
       .attr('x', 0)
-      .attr('y', d => yScale(d.name))
-      .attr('width', d => xScale(d.totalGrowthMonths))
+      .attr('y', d => yScale(d.plantName))
+      .attr('width', d => xScale(d.totalGrowth))
       .attr('height', yScale.bandwidth())
       .style('opacity', '0.8')
       .attr('fill', 'url(#gradient)');
